@@ -32,4 +32,12 @@ Si usaras dobles, te evitarias el escapar caracteres:
 Como has hecho aqui:
 	echo "El usuario $user no existe.";
 	
-		
+Has usado <td> sin estar dentro de tablas ni <tr>. La estructura sería
+<table>
+	<tr>
+		<td>		</td>
+		<td>		</td>
+	</tr>
+</table>
+
+Intenta usar <div></div> en vez de tablas, que se han quedado bastante obsoletas.
