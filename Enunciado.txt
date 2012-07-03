@@ -13,7 +13,7 @@ En el index, hazte el registro para introducir el usuario y la contraseña, y qu
 
 En este que se compruebe si el login es correcto o no, y dependiendo, pues que te lleve a un fichero que se llame correcto.php o error.php.
 
-Comprueba que si algun campo de los que envia está vacio, que no lo envie.
+Comprueba que si algun campo de los que envia está vacio, que no lo envie, y que muestre un mensaje.
 
 Cuando acabes esto subelo y me avisas, no vas a tardar nada.
 
