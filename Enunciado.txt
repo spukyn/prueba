@@ -1,0 +1,35 @@
+A ver, veo que no me haces ni puto caso xDDD. La bbdd deberia tener un id autonumerico, y luego el campo usuario y el password.
+Algo asi como Id,usuario,password. Y que el id sea primary key. Porque para hacer foreign keys es mucho mejor asi, hazme caso.
+
+En los input el campo size es para el tamaño en caracteres del input. Asi que 3 es un poco corto.
+
+Has usado session_start(), y no sabes ni para que se usa, xDDD porque aqui no te haria falta.
+
+Bueno, por lo general guay, era facilito.
+
+A ver hazte una cosa, para que sepas usar varios ficheros, y por lo tanto usar capas.
+
+En el index, hazte el registro para introducir el usuario y la contraseña, y que envie los datos a un fichero que se llame login.php por ejemplo.
+
+En este que se compruebe si el login es correcto o no, y dependiendo, pues que te lleve a un fichero que se llame correcto.php o error.php.
+
+Comprueba que si algun campo de los que envia está vacio, que no lo envie.
+
+Cuando acabes esto subelo y me avisas, no vas a tardar nada.
+
+Notas.
+
+Has puesto esto:
+	Ha fallado la conexi&oacute;n:
+Como, la codificación esta bien, no te haria falta poner eso, ponlo normal:
+	Ha fallado la conexión:
+	
+En php, las comillas simples y las dobles son muy parecidas. Con las comillas dobles puedes poner variables dentro, y te las reconoce.
+Has puesto esto:
+	$result = mysql_query('SELECT password FROM Usuario WHERE idUsuario=\''.$user.'\'');
+Si usaras dobles, te evitarias el escapar caracteres:
+	$result = mysql_query("SELECT password FROM Usuario WHERE idUsuario='$user'");
+Como has hecho aqui:
+	echo "El usuario $user no existe.";
+	
+		
