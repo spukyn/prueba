@@ -1,3 +1,3 @@
-<script>
-	alert("El usuario no existe.");
-</script>
+<?
+	echo "El usuario no existe.";
+?>

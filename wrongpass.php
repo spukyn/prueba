@@ -1,3 +1,3 @@
-<script>
-	alert("La contraseña no es correcta");
-</script>
+<?
+echo "La contraseña no es correcta";
+?>

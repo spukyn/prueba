@@ -1,3 +1,3 @@
-<script>
-	alert("Has sido logueado!");
-</script>
+<?
+	echo "Has sido logueado!";
+?>
