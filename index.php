@@ -14,7 +14,7 @@
 				<div><b>Password</b></div>
 				<INPUT type="password" size=10 name="password"><br/>
 					
-				<INPUT type="submit" value="Enviar">	
+				<INPUT type="submit" value="Enviar" onclick="alert('caca')">
 			</center>
 		</form>	
 			
