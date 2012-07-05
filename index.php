@@ -6,7 +6,8 @@
     		color: purple;
     		text-align: center;
     		vertical-align: middle;
-    		background-color: #d8da3d }				
+    		background-color: #d8da3d }	
+    					
 		</style>
 		
 		
@@ -19,7 +20,11 @@
 				<div>Password</div>
 				<div><INPUT type="password" size=10 name="password"></div>
 					
-				<div><INPUT type="submit" value="Enviar" onclick="alert('caca')"></div>
+				<div><INPUT type="submit" value="Enviar" onclick="alert('caca')"></div>			
 		</form>	
+		<form action="subirarchivo.php" method="post">
+			<div><input type="file" name="archivo"></div>
+			<div><INPUT type="submit" value="Subir archivo"></div>			
+		</form>
 	</body>
 </html>
