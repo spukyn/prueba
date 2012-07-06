@@ -11,23 +11,24 @@
 		
 	</head>
 	<body> 
-		<div style="font-size: 40">2TiemposLibres</div>
-		
-		<form action="login.php" method="post" style="color: #0000FF" >
-			<div style="position: absolute;left: 7%;top: 10%">
+		<div style="font-size: 40" align="center">2TiemposLibres</div>
+		<div style="position: absolute;left: 40%;top: 30%">
+		<form action="login.php" method="post">
+			
 				<div >Usuario</div>
 				<div><INPUT type="text" size=20 name="usuario"></div>
 					
 				<div>Password</div>
 				<div><INPUT type="password" size=20 name="password"></div>
-			</div>	
+			
 					
 				<div style="position: relative; top: 14%"><INPUT type="submit" value="Enviar" onclick="alert('caca')"></div>
 					
 		</form>	
-		<!-- <form action="subirarchivo.php" method="post">
+		<form action="subirarchivo.php" method="post" enctype="multipart/form-data">
 			<div><input type="file" name="archivo"></div>
 			<div><INPUT type="submit" value="Subir archivo"></div>			
-		</form> -->
+		</form>
+		</div>	
 	</body>
 </html>
