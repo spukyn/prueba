@@ -26,7 +26,7 @@
 					
 		</form>	
 		<form action="subirarchivo.php" method="post" enctype="multipart/form-data">
-			<div><input type="file" name="archivo"></div>
+			<div><input type="file" name="archivo" id="archivo"></div>
 			<div><INPUT type="submit" value="Subir archivo"></div>			
 		</form>
 		</div>	
