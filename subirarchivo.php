@@ -6,7 +6,8 @@
 	
 	<body>
 		<?php
-			$conexion= ftp_connect("ftp.spukyn.com");
+			$localhost = "192.168.1.33";
+			$conexion= ftp_connect($localhost);
 			if($conexion){
 				echo "Se ha conectado al servidor<br>";
 			}
@@ -14,7 +15,7 @@
 				echo "Fallo en la conexión al servidor";
 			}
 		
-			$logueo = ftp_login($conexion, "spukyn", "a1a1a1");
+			$logueo = ftp_login($conexion, "ftp_user", "0000");
 			
 			if($logueo){
 				echo "Logueo correcto al server.<br>";
@@ -25,7 +26,7 @@
 			
 			//Pongo el server en modo pasivo para que la iniciativa la tome el cliente
 			ftp_pasv($conexion, TRUE);
-			$path = "/home/spukyn/";
+			$path = "/var/www/directorio_ftp/";
 			$archivo = $path.basename($_FILES['archivo']['name']);
 			
 			$subido =false;
