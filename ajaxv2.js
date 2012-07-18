@@ -35,7 +35,10 @@
 		}
 		
 		function descargaArchivo(){
-			cargarContenido("http://localhost/Prueba/holamundo.txt","GET",muestraContenido);
+			var dir = document.getElementById("direccion");
+			if(dir.value){
+				cargarContenido(dir.value,"GET",muestraContenido);
+			}
 		}
 		
-		window.onload = descargaArchivo;
+
