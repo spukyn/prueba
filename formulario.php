@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<script type="text/javascript" src="formjs.js"></script>
 		
 	</head>
 	<body>
@@ -13,7 +14,7 @@
 			<label for="telefono">Telefono:</label>
 			<input type="text" id="telefono" name="telefono"/><br />
 			
-			<input type="button" value="Validar" />			
+			<input type="button" value="Validar" onclick="valida()" />			
 		</form>
 		
 		<div id="respuesta"></div>
