@@ -42,9 +42,13 @@ function procesaRespuesta(){
 	if(peticion_http.readyState == READY_STATE_COMPLETE){
 		if(peticion_http.status== 200){
 			document.getElementById("respuesta").innerHTML=peticion_http.responseText;
+			document.getElementById("fecha_nacimiento").value=""; //no se si lo de value es la forma mas adecuada de hacer esto..
+			document.getElementById("codigo_postal").value="";
+			document.getElementById("telefono").value="";
+			}
 			if(!peticion_http.responseText){
 				alert("Registro completo");
-			}
+				
 		}
 	}
 }
