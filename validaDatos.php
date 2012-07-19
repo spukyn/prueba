@@ -71,8 +71,9 @@
 		echo $telefonoError;
 	}
 	
-	if((validaFecha($fechaN) and validaCP($codigopostal) and validaTelf($telefono)) == TRUE){
-		
-	}
+	/*if((validaFecha($fechaN) and validaCP($codigopostal) and validaTelf($telefono)) == TRUE){
+		return "Valido";
+	}*/
+	
 	
 ?>

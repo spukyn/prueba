@@ -42,6 +42,9 @@ function procesaRespuesta(){
 	if(peticion_http.readyState == READY_STATE_COMPLETE){
 		if(peticion_http.status== 200){
 			document.getElementById("respuesta").innerHTML=peticion_http.responseText;
+			if(!peticion_http.responseText){
+				alert("Registro completo");
+			}
 		}
 	}
 }
