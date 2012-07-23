@@ -1,5 +1,7 @@
 <?php
 
+init_set("display_errors",1);
+
 	/*class Datos{
 		public $fecha;
 		public $cp;
