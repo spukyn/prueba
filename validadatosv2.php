@@ -71,7 +71,7 @@
 	
 	
 	
-	$respuesta = new Respuesta();
+	//$respuesta = new Respuesta();
 	$mens = "";
 	if(validaFecha($fechaN)== FALSE){
 		$mens = $mens.$fechaError;
