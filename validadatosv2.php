@@ -86,11 +86,19 @@
 		$mens = $mens.$telefonoError;
 	}
 	
-	$cadenaresp = "{mensaje = '$mens'}";
+	//Esto es lo que has hecho tu
+	//$cadenaresp = "{mensaje = '$mens'}";
+	
+	//Esto es lo que yo haría, por ejemplo, porque generar la cadena cuando se trata de muchas cosas es mas complejo.
+	$respuesta=array();
+	$respuesta['mensaje']=$mens;
+	echo json_encode($respuesta);
+	
+	//Es muy sencillo, te vas generando el array solo, y luego le haces en encode, para estructuras complejas es la polla.
 	
 	//$respuesta->mensaje = $mens;
 	//echo json_encode($respuesta);
-	echo $cadenaresp;
+	//echo $cadenaresp;
 	
 	
 ?>
