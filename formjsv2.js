@@ -42,19 +42,22 @@ function procesaRespuesta(){
 	if(peticion_http.readyState == READY_STATE_COMPLETE){
 		if(peticion_http.status== 200){
 			var respuesta_json = peticion_http.responseText;
-			var objeto_json = eval("("+respuesta_json+")");
-			var objeto_json = eval("("+respuesta_json+")");
+			var objeto_json = eval("("+respuesta_json+")");	
+			var salida = "";
+			salida = salida + objeto_json.mensaje + objeto_json.datos.fecha + "\n" + objeto_json.datos.cp + "\n" + objeto_json.datos.telf;
+			
+			//document.getElementById("respuesta").innerHTML= salida;+ "\n" + objeto_json.datos.cp + "\n" + objeto_json.datos.telf;
 
-			
-			
-			document.getElementById("respuesta").innerHTML= objeto_json.mensaje;
 			document.getElementById("fecha_nacimiento").value=""; //no se si lo de value es la forma mas adecuada de hacer esto..
 			document.getElementById("codigo_postal").value="";
 			document.getElementById("telefono").value="";
-			}
-			if(!peticion_http.responseText){
+			if(!objeto_json.mensaje){
 				alert("Registro completo");
-				
+			}
+			else{
+				alert(salida);
+			}
+			
 		}
 	}
 }

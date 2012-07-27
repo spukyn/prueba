@@ -1,0 +1,22 @@
+body {	
+	background-color: #20496C;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+}
+
+.registro{
+	width: 280px;
+	height: 200px;
+	text-align: center;
+	padding: 20px;
+	background-color: #8099DF;
+	border: 2px solid #000000;
+}
+
+.registroTitulo{
+	color: #BB3411;
+	font-family: "Comic Sans MS", Arial, sans-serif;
+	font-size: 30pt;
+}
+

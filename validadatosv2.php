@@ -1,14 +1,14 @@
 <?php
 
-init_set("display_errors",1);
+ini_set('display_errors', 1);
 
 	/*class Datos{
 		public $fecha;
 		public $cp;
 		public $telf;
-	}*/
+	}
 	
-	/*class Respuesta{
+	class Respuesta{
 		public $mensaje;
 		public $datos = new Datos();
 	}*/
@@ -27,7 +27,7 @@ init_set("display_errors",1);
 			$yearvalido = is_numeric($year);
 			
 			if((($b1 and $b2)=='/') and (($diavalido and $mesvalido and $yearvalido)==TRUE)){
-				return TRUE;				
+				return checkdate($mes, $dia, $year);				
 			}
 			else {
 				return FALSE;
@@ -67,13 +67,13 @@ init_set("display_errors",1);
 	$codigopostal = $_POST["codigo_postal"];
 	$telefono = $_POST["telefono"];
 	
-    $fechaError = "La fecha debe tener el siguiente formato dd/mm/aaaa y dia, mes y año deben ser númericos<br />";
-	$codigoError = "El codigo postal debe estar compuesto por 5 digitos.<br />";
-	$telefonoError = "El telefono debe estar formado por 9 digitos.<br />";	
+    $fechaError = "La fecha debe tener el siguiente formato dd/mm/aaaa y dia, mes y año deben ser númericos\n";
+	$codigoError = "El codigo postal debe estar compuesto por 5 digitos\n";
+	$telefonoError = "El telefono debe estar formado por 9 digitos\n";	
 	
 	
 	
-	$respuesta = new Respuesta();
+	//$respuesta = new Respuesta();
 	$mens = "";
 	if(validaFecha($fechaN)== FALSE){
 		$mens = $mens.$fechaError;
@@ -94,6 +94,9 @@ init_set("display_errors",1);
 	//Esto es lo que yo haría, por ejemplo, porque generar la cadena cuando se trata de muchas cosas es mas complejo.
 	$respuesta=array();
 	$respuesta['mensaje']=$mens;
+	$respuesta['datos']['fecha']=$fechaN;
+	$respuesta['datos']['cp']=$codigopostal;
+	$respuesta['datos']['telf']=$telefono;
 	echo json_encode($respuesta);
 	
 	//Es muy sencillo, te vas generando el array solo, y luego le haces en encode, para estructuras complejas es la polla.
